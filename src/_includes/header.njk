@@ -1,0 +1,12 @@
+<nav class="bg-gray-100">
+  <div class="container py-4 space-x-2">
+    {% for item in navigation %}
+      <a
+        class="{{ 'font-black' if page.url == item.route }}"
+        href="{{ item.route }}"
+      >
+        {{ item.name }}
+      </a>
+    {% endfor %}
+  </div>
+</nav>
